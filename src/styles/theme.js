@@ -10,7 +10,7 @@ const theme = {
   },
 
   fonts: {
-    Calibre:
+    PublicSans:
       "Public Sans, San Francisco, SF Pro Text, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Helvetica Neue, Segoe UI, Arial, sans-serif",
   },
 
@@ -21,7 +21,7 @@ const theme = {
     lg: "18px",
     xl: "20px",
     xxl: "22px",
-    xxxl: "32px",
+    xxxl: "36px",
   },
 };
 

@@ -1,40 +1,61 @@
 import React from "react";
 
 import styled from "styled-components";
+import { Button, theme } from "../styles";
 
-const Wrapper = styled.section`
+const { fontSizes } = theme;
+
+const ImageBg = styled.div`
+  background: url("./images/bg-intro-mobile.svg");
+  background-size: cover;
+  position: absolute;
+  width: 375px;
+  height: 345px;
+  z-index: -1;
+`;
+
+const StyledContainer = styled.section`
   width: 325px;
   border: 1px solid green;
   margin: 0 auto;
+  text-align: center;
 
   & .mockups {
     border: 1px solid blue;
     width: 325px;
     margin-top: -35px;
   }
+`;
 
-  & .hero {
-    text-align: center;
-  }
+const StyledTitle = styled.h1`
+  font-size: ${fontSizes.xxxl};
+  font-weight: 400;
+`;
+
+const StyledDescription = styled.p`
+  font-size: ${fontSizes.sm};
+  font-weight: 400;
+  line-height: 1.75em;
 `;
 
 const Hero = () => {
   return (
-    <Wrapper>
-      <img className="mockups" src="./images/image-mockups.png" alt="" />
+    <>
+      <ImageBg />
+      <StyledContainer>
+        <img className="mockups" src="./images/image-mockups.png" alt="" />
 
-      <div className="hero">
-        <h1>Next generation digital banking</h1>
+        <StyledTitle>Next generation digital banking</StyledTitle>
 
-        <p>
+        <StyledDescription>
           Take your financial life online. Your Easybank account will be a
           one-stop-shop for spending, saving, budgeting, investing, and much
           more.
-        </p>
+        </StyledDescription>
 
-        <button>Request Invite</button>
-      </div>
-    </Wrapper>
+        <Button>Request Invite</Button>
+      </StyledContainer>
+    </>
   );
 };
 
