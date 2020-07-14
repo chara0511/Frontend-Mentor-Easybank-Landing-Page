@@ -26,7 +26,7 @@ const StyledTitle = styled.h2`
   margin-top: 1.5em;
 `;
 
-export const StyledDescription = styled.p`
+const StyledDescription = styled.p`
   font-size: ${fontSizes.sm};
   font-weight: 400;
   line-height: 1.75em;

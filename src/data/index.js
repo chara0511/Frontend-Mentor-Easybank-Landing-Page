@@ -20,7 +20,7 @@ export const data = {
         {
           title: "Simple Budgeting",
           description:
-            "See exactly where your money goes each month.Receive notifications when you're close to your hitting limits.",
+            "See exactly where your money goes each month. Receive notifications when you're close to your hitting limits.",
           image: "./images/icon-budgeting.svg",
         },
         {

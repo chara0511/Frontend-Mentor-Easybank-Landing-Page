@@ -1,6 +1,9 @@
 import React from "react";
+
 import styled from "styled-components";
-import { StyledDescription } from "../featured";
+import { theme } from "../../styles";
+
+const { fontSizes } = theme;
 
 const StyledContainer = styled.article`
   border: 1px solid blue;
@@ -16,7 +19,11 @@ const StyledImage = styled.div`
   height: 75px;
 `;
 
-const StyledItemsDescription = styled(StyledDescription)``;
+const StyledItemsDescription = styled.p`
+  font-size: ${fontSizes.sm};
+  font-weight: 400;
+  line-height: 1.75em;
+`;
 
 const FeaturedItems = ({ items }) => {
   const { title, description, image } = items;
