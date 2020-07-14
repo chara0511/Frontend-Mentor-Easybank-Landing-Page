@@ -75,7 +75,6 @@ html {
       list-style: none;
       li {
         position: relative;
-        padding-left: 30px;
       }
   }
   

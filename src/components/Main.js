@@ -4,6 +4,7 @@ import Hero from "./hero";
 import Featured from "./featured";
 import MainState from "./context/mainState";
 import Cards from "./cards";
+import Footer from "./footer";
 
 const Main = () => {
   return (
@@ -11,6 +12,7 @@ const Main = () => {
       <Hero />
       <Featured />
       <Cards />
+      <Footer />
     </MainState>
   );
 };

@@ -29,7 +29,7 @@ const StyledTitle = styled.h2`
 
 const StyledGrid = styled.div`
   display: grid;
-  row-gap: 2em;
+  row-gap: 1em;
 `;
 
 const Cards = () => {

@@ -31,11 +31,12 @@ const StyledDescription = styled.p`
   font-size: ${fontSizes.sm};
   font-weight: 400;
   line-height: 1.75em;
+  padding-bottom: 3em;
 `;
 
 const StyledGrid = styled.div`
   display: grid;
-  row-gap: 2em;
+  row-gap: 1em;
 `;
 
 const Featured = () => {
