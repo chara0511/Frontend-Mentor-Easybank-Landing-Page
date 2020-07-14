@@ -70,5 +70,29 @@ export const data = {
         },
       ],
     },
+    footer: {
+      social: {
+        logo: "./images/logo-footer.svg",
+        icons: [
+          {
+            src: "./images/icon-facebook.svg",
+          },
+          {
+            src: "./images/icon-youtube.svg",
+          },
+          {
+            src: "./images/icon-twitter.svg",
+          },
+          {
+            src: "./images/icon-pinterest.svg",
+          },
+          {
+            src: "./images/icon-instagram.svg",
+          },
+        ],
+      },
+      menu: {},
+      other: {},
+    },
   },
 };
