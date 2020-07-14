@@ -14,6 +14,10 @@ const Button = styled.button`
   font-size: ${fontSizes.sm};
   font-weight: 700;
   border-radius: 35px;
+
+  &:hover {
+    opacity: 0.5;
+  }
 `;
 
 export default Button;

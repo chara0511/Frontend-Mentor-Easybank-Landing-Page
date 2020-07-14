@@ -1,30 +1,42 @@
-import React from "react";
+import React, { useContext } from "react";
+import MainContext from "./context/mainContext";
 
 import styled from "styled-components";
 import { Button, theme } from "../styles";
 
 const { fontSizes } = theme;
 
-const ImageBg = styled.div`
-  background: url("./images/bg-intro-mobile.svg");
+const StyledBackground = styled.div`
+  background-image: url("./images/bg-intro-mobile.svg");
   background-size: cover;
   position: absolute;
-  width: 375px;
+  width: 100%;
   height: 345px;
   z-index: -1;
+
+  border: 1px brown solid;
 `;
 
 const StyledContainer = styled.section`
-  width: 325px;
+  width: 90%;
   border: 1px solid green;
   margin: 0 auto;
   text-align: center;
+`;
 
-  & .mockups {
-    border: 1px solid blue;
-    width: 325px;
-    margin-top: -35px;
-  }
+const StyledImage = styled.div`
+  border: 1px solid blue;
+  margin: 0 auto;
+  margin-top: -35px;
+  background: url(${(props) => props.image});
+  background-size: cover;
+  background-position: center;
+  width: 325px;
+  height: 395px;
+`;
+
+const StyledContent = styled.div`
+  padding-bottom: 3em;
 `;
 
 const StyledTitle = styled.h1`
@@ -38,22 +50,27 @@ const StyledDescription = styled.p`
   line-height: 1.75em;
 `;
 
+const ButtonHero = styled(Button)`
+  margin: 1em 0;
+`;
+
 const Hero = () => {
+  const { data } = useContext(MainContext);
+  const { hero } = data;
+
   return (
     <>
-      <ImageBg />
+      <StyledBackground />
       <StyledContainer>
-        <img className="mockups" src="./images/image-mockups.png" alt="" />
+        <StyledImage image={hero.image} />
 
-        <StyledTitle>Next generation digital banking</StyledTitle>
+        <StyledContent>
+          <StyledTitle>{hero.title}</StyledTitle>
 
-        <StyledDescription>
-          Take your financial life online. Your Easybank account will be a
-          one-stop-shop for spending, saving, budgeting, investing, and much
-          more.
-        </StyledDescription>
+          <StyledDescription>{hero.description}</StyledDescription>
 
-        <Button>Request Invite</Button>
+          <ButtonHero>Request Invite</ButtonHero>
+        </StyledContent>
       </StyledContainer>
     </>
   );

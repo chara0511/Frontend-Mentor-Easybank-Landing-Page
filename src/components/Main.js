@@ -1,21 +1,15 @@
 import React from "react";
-import styled from "styled-components";
 
 import Hero from "./hero";
-import media from "../styles/media";
-
-const Container = styled.main`
-  max-width: 375px;
-  margin: 0 auto;
-  border: 1px solid red;
-  ${media.smPhone`max-width:375px`};
-`;
+import Featured from "./featured";
+import MainState from "./context/mainState";
 
 const Main = () => {
   return (
-    <Container>
+    <MainState>
       <Hero />
-    </Container>
+      <Featured />
+    </MainState>
   );
 };
 

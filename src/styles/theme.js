@@ -19,9 +19,9 @@ const theme = {
     sm: "14px",
     md: "16px",
     lg: "18px",
-    xl: "20px",
-    xxl: "22px",
-    xxxl: "36px",
+    xl: "24px",
+    xxl: "32px",
+    xxxl: "40px",
   },
 };
 
