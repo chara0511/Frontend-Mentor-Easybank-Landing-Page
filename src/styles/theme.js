@@ -15,11 +15,12 @@ const theme = {
   },
 
   fontSizes: {
+    xxs: "10px",
     xs: "12px",
     sm: "14px",
     md: "16px",
     lg: "18px",
-    xl: "24px",
+    xl: "22px",
     xxl: "32px",
     xxxl: "40px",
   },

@@ -19,6 +19,11 @@ const StyledImage = styled.div`
   height: 75px;
 `;
 
+const StyledTitle = styled.h3`
+  font-size: ${fontSizes.xl};
+  font-weight: 400;
+`;
+
 const StyledItemsDescription = styled.p`
   font-size: ${fontSizes.sm};
   font-weight: 400;
@@ -30,7 +35,7 @@ const FeaturedItems = ({ items }) => {
   return (
     <StyledContainer>
       <StyledImage image={image} />
-      <h3>{title}</h3>
+      <StyledTitle>{title}</StyledTitle>
       <StyledItemsDescription>{description}</StyledItemsDescription>
     </StyledContainer>
   );

@@ -1,15 +1,15 @@
 import React, { useContext } from "react";
 
-import MainContext from "./context/mainContext";
-import FeaturedItems from "./sections/featuredItems";
+import CardItems from "./sections/cardItems";
 
 import styled from "styled-components";
 import { theme } from "../styles";
+import MainContext from "./context/mainContext";
 
 const { colors, fontSizes } = theme;
 
 const StyledBackground = styled.div`
-  background: ${colors.lightGrayishBlue};
+  background: ${colors.veryLightGray};
   border: 5px black solid;
 `;
 
@@ -27,32 +27,24 @@ const StyledTitle = styled.h2`
   margin-top: 1.5em;
 `;
 
-const StyledDescription = styled.p`
-  font-size: ${fontSizes.sm};
-  font-weight: 400;
-  line-height: 1.75em;
-`;
-
 const StyledGrid = styled.div`
   display: grid;
   row-gap: 2em;
 `;
 
-const Featured = () => {
+const Cards = () => {
   const { data } = useContext(MainContext);
-  const { featured } = data;
+  const { cards } = data;
+  const { title, items } = cards;
 
-  const { title, description, items } = featured;
   return (
     <StyledBackground>
       <StyledContainer>
         <StyledTitle>{title}</StyledTitle>
 
-        <StyledDescription>{description}</StyledDescription>
-
         <StyledGrid>
-          {items.map((items, index) => (
-            <FeaturedItems key={index} items={items} />
+          {items.map((item, index) => (
+            <CardItems key={index} item={item} />
           ))}
         </StyledGrid>
       </StyledContainer>
@@ -60,4 +52,4 @@ const Featured = () => {
   );
 };
 
-export default Featured;
+export default Cards;
