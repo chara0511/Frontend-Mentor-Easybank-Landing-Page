@@ -61,6 +61,7 @@ const Hero = () => {
   return (
     <>
       <StyledBackground />
+
       <StyledContainer>
         <StyledImage image={hero.image} />
 

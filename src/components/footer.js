@@ -78,7 +78,6 @@ const Footer = () => {
 
         <article>
           <Button>Request Invite</Button>
-
           <StyledCopy>{other.copy}</StyledCopy>
         </article>
       </StyledContainer>
@@ -87,3 +86,11 @@ const Footer = () => {
 };
 
 export default Footer;
+
+// -elimina los links o src con extension .svg .
+// -convertirlos en componentes js y agruparlos en una carpeta icons .
+// -importarlos y exportarlos en un index ./icons para mejores practicas
+// -editar la data en el index , agregar los nombres de los iconos y pasarlos como props a cada componente.
+//crear un archivo(formattedicons), importar los icons de ./icons, codea un switch que reciba props como parametro-name- y que recorra cada uno de ellos y exportar a sus debidos components
+//eso deberia resultar...
+//atte. Alvaro
