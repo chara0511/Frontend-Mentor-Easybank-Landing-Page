@@ -2,11 +2,12 @@ import React, { useContext } from "react";
 import MainContext from "./context/mainContext";
 
 import Items from "./sections/items";
+import MenuItems from "./sections/menuItems";
 
 import styled from "styled-components";
-import { theme } from "../styles";
+import { theme, Button } from "../styles";
 
-const { colors } = theme;
+const { colors, fontSizes } = theme;
 
 const StyledBackground = styled.div`
   background: ${colors.darkBlue};
@@ -21,6 +22,7 @@ const StyledContainer = styled.footer`
   text-align: center;
   display: grid;
   row-gap: 1em;
+  padding-bottom: 2.2em;
 `;
 
 const StyledLogo = styled.div`
@@ -37,6 +39,15 @@ const StyledItems = styled.ul`
   border: 3px solid orange;
   display: flex;
   justify-content: center;
+`;
+
+const StyledItemsMenu = styled(StyledItems)`
+  display: block;
+`;
+
+const StyledCopy = styled.p`
+  padding-top: 1em;
+  font-size: ${fontSizes.sm};
 `;
 
 const Footer = () => {
@@ -58,44 +69,17 @@ const Footer = () => {
         </article>
 
         <article>
-          <ul class="footer-menu">
-            <li>
-              <a class="footer-menu-item" href="">
-                About Us
-              </a>
-            </li>
-            <li>
-              <a class="footer-menu-item" href="">
-                Contact
-              </a>
-            </li>
-            <li>
-              <a class="footer-menu-item" href="">
-                Blog
-              </a>
-            </li>
-            <li>
-              <a class="footer-menu-item" href="">
-                Careers
-              </a>
-            </li>
-            <li>
-              <a class="footer-menu-item" href="">
-                Support
-              </a>
-            </li>
-            <li>
-              <a class="footer-menu-item" href="">
-                Privacy Policy
-              </a>
-            </li>
-          </ul>
+          <StyledItemsMenu>
+            {menu.map((item, index) => (
+              <MenuItems key={index} item={item} />
+            ))}
+          </StyledItemsMenu>
         </article>
 
-        <article class="text-right">
-          <button class="my">Request Invite</button>
+        <article>
+          <Button>Request Invite</Button>
 
-          <p class="mx">© Easybank. All Rights Reserved</p>
+          <StyledCopy>{other.copy}</StyledCopy>
         </article>
       </StyledContainer>
     </StyledBackground>

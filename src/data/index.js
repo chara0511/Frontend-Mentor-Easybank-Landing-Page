@@ -76,23 +76,37 @@ export const data = {
         icons: [
           {
             src: "./images/icon-facebook.svg",
+            link: "https://www.facebook.com/",
           },
           {
             src: "./images/icon-youtube.svg",
+            link: "https://www.youtube.com/",
           },
           {
             src: "./images/icon-twitter.svg",
+            link: "https://twitter.com/explore",
           },
           {
             src: "./images/icon-pinterest.svg",
+            link: "https://www.pinterest.com/",
           },
           {
             src: "./images/icon-instagram.svg",
+            link: "https://www.instagram.com/",
           },
         ],
       },
-      menu: {},
-      other: {},
+      menu: [
+        { name: "About US" },
+        { name: "Contact" },
+        { name: "Blog" },
+        { name: "Careers" },
+        { name: "Support" },
+        { name: "Privacy Policy" },
+      ],
+      other: {
+        copy: "© Easybank. All Rights Reserved",
+      },
     },
   },
 };
