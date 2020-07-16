@@ -4,13 +4,19 @@ const IconBudgeting = () => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72">
       <defs>
-        <linearGradient id="a" x1="0%" x2="99.58%" y1="0%" y2="99.58%">
+        <linearGradient
+          id="iconBudgeting"
+          x1="0%"
+          x2="99.58%"
+          y1="0%"
+          y2="99.58%"
+        >
           <stop offset="0%" stopColor="#33D35E"></stop>
           <stop offset="100%" stopColor="#2AB6D9"></stop>
         </linearGradient>
       </defs>
       <g fill="none" fillRule="evenodd">
-        <circle cx="36" cy="36" r="36" fill="url(#a)"></circle>
+        <circle cx="36" cy="36" r="36" fill="url(#iconBudgeting)"></circle>
         <path
           fill="#FFF"
           fillRule="nonzero"

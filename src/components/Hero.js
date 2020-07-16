@@ -8,14 +8,16 @@ import { FormattedIcons } from "./icons";
 const { fontSizes } = theme;
 
 const StyledBackground = styled.div`
-  background-image: url("./images/bg-intro-mobile.svg");
-  background-size: cover;
   position: absolute;
+  z-index: -1;
+  border: 1px brown solid;
   width: 100%;
   height: 345px;
-  z-index: -1;
 
-  border: 1px brown solid;
+  svg {
+    width: 100%;
+    height: 345px;
+  }
 `;
 
 const StyledContainer = styled.section`
@@ -71,9 +73,7 @@ const Hero = () => {
 
         <StyledContent>
           <StyledTitle>{title}</StyledTitle>
-
           <StyledDescription>{description}</StyledDescription>
-
           <ButtonHero>Request Invite</ButtonHero>
         </StyledContent>
       </StyledContainer>

@@ -11,7 +11,7 @@ const StyledContainer = styled.article`
 `;
 
 const StyledIcon = styled.div`
-  border: 1px solid blue;
+  border: 1px solid red;
   width: 75px;
   margin: 0 auto;
   height: 75px;

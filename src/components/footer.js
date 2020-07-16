@@ -31,8 +31,9 @@ const StyledLogo = styled.div`
   height: 22px;
   margin-top: 2.2em;
   margin-bottom: 1.7em;
+  border: 1px solid green;
 
-  svg .logo {
+  & svg .logo {
     fill: ${colors.white};
   }
 `;
