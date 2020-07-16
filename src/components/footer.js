@@ -5,7 +5,7 @@ import Items from "./sections/items";
 import MenuItems from "./sections/menuItems";
 
 import styled from "styled-components";
-import { theme, Button } from "../styles";
+import { theme, Button, media } from "../styles";
 import { FormattedIcons } from "./icons";
 
 const { colors, fontSizes } = theme;
@@ -23,19 +23,36 @@ const StyledContainer = styled.footer`
   text-align: center;
   display: grid;
   row-gap: 1em;
+  padding-top: 2.2em;
   padding-bottom: 2.2em;
+
+  & .box {
+    ${media.mdDesktop`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end`};
+  }
+
+  ${media.mdTablet`
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1em;
+    padding-top: 40px;`};
 `;
 
 const StyledLogo = styled.div`
   width: 100%;
   height: 22px;
-  margin-top: 2.2em;
+  margin-top: 1em;
   margin-bottom: 1.7em;
   border: 1px solid green;
 
   & svg .logo {
     fill: ${colors.white};
   }
+
+  ${media.mdDesktop`
+    margin-bottom: 3.3em`};
 `;
 
 const StyledItems = styled.ul`
@@ -46,6 +63,10 @@ const StyledItems = styled.ul`
 
 const StyledItemsMenu = styled(StyledItems)`
   display: block;
+
+  ${media.mdTablet`
+    columns: 2;
+    text-align: left;`};
 `;
 
 const StyledCopy = styled.p`
@@ -81,7 +102,7 @@ const Footer = () => {
           </StyledItemsMenu>
         </article>
 
-        <article>
+        <article className="box">
           <Button>Request Invite</Button>
           <StyledCopy>{other.copy}</StyledCopy>
         </article>
@@ -91,11 +112,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-// -elimina los links o src con extension .svg .
-// -convertirlos en componentes js y agruparlos en una carpeta icons .
-// -importarlos y exportarlos en un index ./icons para mejores practicas
-// -editar la data en el index , agregar los nombres de los iconos y pasarlos como props a cada componente.
-//crear un archivo(formattedicons), importar los icons de ./icons, codea un switch que reciba props como parametro-name- y que recorra cada uno de ellos y exportar a sus debidos components
-//eso deberia resultar...
-//atte. Alvaro

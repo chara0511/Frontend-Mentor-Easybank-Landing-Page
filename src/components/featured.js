@@ -4,7 +4,7 @@ import MainContext from "./context/mainContext";
 import FeaturedItems from "./sections/featuredItems";
 
 import styled from "styled-components";
-import { theme } from "../styles";
+import { theme, media } from "../styles";
 
 const { colors, fontSizes } = theme;
 
@@ -37,6 +37,13 @@ const StyledDescription = styled.p`
 const StyledGrid = styled.div`
   display: grid;
   row-gap: 1em;
+  ${media.mdTablet`
+    grid-template-columns:1fr 1fr;
+    column-gap: 1em`};
+
+  ${media.mdDesktop`
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    column-gap: 1em`};
 `;
 
 const Featured = () => {

@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import MainContext from "./context/mainContext";
 
 import styled from "styled-components";
-import { Button, theme } from "../styles";
+import { Button, theme, media } from "../styles";
 import { FormattedIcons } from "./icons";
 
 const { fontSizes } = theme;
@@ -61,6 +61,8 @@ const Hero = () => {
   const { data } = useContext(MainContext);
   const { hero } = data;
   const { background, image, title, description } = hero;
+
+  console.log(media.mdDesktop);
 
   return (
     <>

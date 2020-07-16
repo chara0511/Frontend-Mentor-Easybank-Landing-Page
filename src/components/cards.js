@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import CardItems from "./sections/cardItems";
 
 import styled from "styled-components";
-import { theme } from "../styles";
+import { theme, media } from "../styles";
 import MainContext from "./context/mainContext";
 
 const { colors, fontSizes } = theme;
@@ -30,6 +30,14 @@ const StyledTitle = styled.h2`
 const StyledGrid = styled.div`
   display: grid;
   row-gap: 1em;
+
+  ${media.mdTablet`
+    grid-template-columns:1fr 1fr;
+    column-gap: 1em`};
+
+  ${media.mdDesktop`
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    column-gap: 1em`};
 `;
 
 const Cards = () => {
