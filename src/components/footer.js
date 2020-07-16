@@ -6,6 +6,7 @@ import MenuItems from "./sections/menuItems";
 
 import styled from "styled-components";
 import { theme, Button } from "../styles";
+import { FormattedIcons } from "./icons";
 
 const { colors, fontSizes } = theme;
 
@@ -26,13 +27,14 @@ const StyledContainer = styled.footer`
 `;
 
 const StyledLogo = styled.div`
-  background-image: url(${(props) => props.logo});
-  background-position: center;
-  background-repeat: no-repeat;
   width: 100%;
   height: 22px;
   margin-top: 2.2em;
   margin-bottom: 1.7em;
+
+  svg .logo {
+    fill: ${colors.white};
+  }
 `;
 
 const StyledItems = styled.ul`
@@ -59,7 +61,9 @@ const Footer = () => {
     <StyledBackground>
       <StyledContainer>
         <article>
-          <StyledLogo logo={social.logo} />
+          <StyledLogo>
+            <FormattedIcons name={social.name} />
+          </StyledLogo>
 
           <StyledItems>
             {social.icons.map((icon, index) => (

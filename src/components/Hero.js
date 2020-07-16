@@ -3,6 +3,7 @@ import MainContext from "./context/mainContext";
 
 import styled from "styled-components";
 import { Button, theme } from "../styles";
+import { FormattedIcons } from "./icons";
 
 const { fontSizes } = theme;
 
@@ -57,18 +58,21 @@ const ButtonHero = styled(Button)`
 const Hero = () => {
   const { data } = useContext(MainContext);
   const { hero } = data;
+  const { background, image, title, description } = hero;
 
   return (
     <>
-      <StyledBackground />
+      <StyledBackground>
+        <FormattedIcons name={background[1].mobile} />
+      </StyledBackground>
 
       <StyledContainer>
-        <StyledImage image={hero.image} />
+        <StyledImage image={image} />
 
         <StyledContent>
-          <StyledTitle>{hero.title}</StyledTitle>
+          <StyledTitle>{title}</StyledTitle>
 
-          <StyledDescription>{hero.description}</StyledDescription>
+          <StyledDescription>{description}</StyledDescription>
 
           <ButtonHero>Request Invite</ButtonHero>
         </StyledContent>

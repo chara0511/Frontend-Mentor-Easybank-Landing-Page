@@ -5,6 +5,7 @@ export const data = {
       description:
         "Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.",
       image: "./images/image-mockups.png",
+      background: [{ desktop: "BgIntroDesktop" }, { mobile: "BgIntroMobile" }],
     },
     featured: {
       title: "Why choose Easybank?",
@@ -12,28 +13,28 @@ export const data = {
         "We leverage Open Banking to turn your bank account into your financial hub. Control your finances like never before.",
       items: [
         {
-          title: "Online Banking",
+          name: "Online Banking",
           description:
             "Our modern web and mobile applications allow you to keep track of your finances wherever you are in the world.",
-          image: "./images/icon-online.svg",
+          icon: "IconOnline",
         },
         {
-          title: "Simple Budgeting",
+          name: "Simple Budgeting",
           description:
             "See exactly where your money goes each month. Receive notifications when you're close to your hitting limits.",
-          image: "./images/icon-budgeting.svg",
+          icon: "IconBudgeting",
         },
         {
-          title: "Fast Onboarding",
+          name: "Fast Onboarding",
           description:
             "We don't do branches. Open your account in minutes online and start taking control of your finances right away.",
-          image: "./images/icon-onboarding.svg",
+          icon: "IconOnBoarding",
         },
         {
-          title: "Open API",
+          name: "Open API",
           description:
             "Manage your savings, investments, pension, and much more from one account. Tracking your money has never been easier.",
-          image: "./images/icon-api.svg",
+          icon: "IconApi",
         },
       ],
     },
@@ -41,28 +42,32 @@ export const data = {
       title: "Latest Articles",
       items: [
         {
-          title: "Receive money in any currency with no fees",
+          name: "Receive money in any currency with no fees",
+          link: "/#",
           description:
             "The world is getting smaller and we're becoming more mobile. So why should you be forced to only receive money in a single ...",
           author: "By Claire Robinson",
           image: "./images/image-currency.jpg",
         },
         {
-          title: "Treat yourself without worrying about money",
+          name: "Treat yourself without worrying about money",
+          link: "/#",
           description:
             "Our simple budgeting feature allows you to separate out your spending and set realistic limits each month. That means you ...",
           author: "By Wilson Hutton",
           image: "./images/image-restaurant.jpg",
         },
         {
-          title: "Take your Easybank card wherever you go",
+          name: "Take your Easybank card wherever you go",
+          link: "/#",
           description:
             "We want you to enjoy your travels. This is why we don’t charge any fees on purchases while you’re abroad. We’ll even show you ...",
           author: "By Wilson Hutton",
           image: "./images/image-plane.jpg",
         },
         {
-          title: "Our invite-only Beta accounts are now live!",
+          name: "Our invite-only Beta accounts are now live!",
+          link: "/#",
           description:
             "After a lot of hard work by the whole team, we’re excited to launch our closed beta. It’s easy to request an invite through the site ...",
           author: "By Claire Robinson",
@@ -72,26 +77,26 @@ export const data = {
     },
     footer: {
       social: {
-        logo: "./images/logo-footer.svg",
+        name: "Logo",
         icons: [
           {
-            src: "./images/icon-facebook.svg",
+            name: "IconFacebook",
             link: "https://www.facebook.com/",
           },
           {
-            src: "./images/icon-youtube.svg",
+            name: "IconYoutube",
             link: "https://www.youtube.com/",
           },
           {
-            src: "./images/icon-twitter.svg",
+            name: "IconTwitter",
             link: "https://twitter.com/explore",
           },
           {
-            src: "./images/icon-pinterest.svg",
+            name: "IconPinterest",
             link: "https://www.pinterest.com/",
           },
           {
-            src: "./images/icon-instagram.svg",
+            name: "IconInstagram",
             link: "https://www.instagram.com/",
           },
         ],

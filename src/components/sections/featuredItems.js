@@ -2,6 +2,7 @@ import React from "react";
 
 import styled from "styled-components";
 import { theme } from "../../styles";
+import { FormattedIcons } from "../icons";
 
 const { fontSizes } = theme;
 
@@ -9,17 +10,14 @@ const StyledContainer = styled.article`
   border: 1px solid blue;
 `;
 
-const StyledImage = styled.div`
+const StyledIcon = styled.div`
   border: 1px solid blue;
   width: 75px;
   margin: 0 auto;
-  background: url(${(props) => props.image});
-  background-size: cover;
-  background-position: center;
   height: 75px;
 `;
 
-const StyledTitle = styled.h3`
+const StyledName = styled.h3`
   font-size: ${fontSizes.xl};
   font-weight: 400;
 `;
@@ -31,11 +29,15 @@ const StyledItemsDescription = styled.p`
 `;
 
 const FeaturedItems = ({ items }) => {
-  const { title, description, image } = items;
+  const { name, description, icon } = items;
+
   return (
     <StyledContainer>
-      <StyledImage image={image} />
-      <StyledTitle>{title}</StyledTitle>
+      <StyledIcon>
+        <FormattedIcons name={icon} />
+      </StyledIcon>
+
+      <StyledName>{name}</StyledName>
       <StyledItemsDescription>{description}</StyledItemsDescription>
     </StyledContainer>
   );

@@ -1,5 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import { FormattedIcons } from "../icons";
+import { theme } from "../../styles";
+
+const { colors } = theme;
 
 const StyledContainer = styled.li`
   margin-left: 0.5em;
@@ -8,23 +12,20 @@ const StyledContainer = styled.li`
 `;
 
 const StyledIcon = styled.a`
-  background: url(${(props) => props.icon});
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   width: 25px;
   height: 25px;
+
+  & svg path:hover {
+    fill: ${colors.limeGreen};
+  }
 `;
 
 const Items = ({ icon }) => {
   return (
     <StyledContainer>
-      <StyledIcon
-        href={icon.link}
-        target="_blank"
-        rel="noopener noreferrer"
-        icon={icon.src}
-      />
+      <StyledIcon href={icon.link} target="_blank" rel="noopener noreferrer">
+        <FormattedIcons name={icon.name} />
+      </StyledIcon>
     </StyledContainer>
   );
 };

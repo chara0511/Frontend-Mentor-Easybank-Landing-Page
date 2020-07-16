@@ -30,10 +30,11 @@ const StyledAuthor = styled.p`
   margin: 0;
 `;
 
-const StyledTitle = styled.h4`
+const StyledName = styled.a`
   font-size: ${fontSizes.md};
   font-weight: 400;
   margin: 0.75em 0;
+  color: ${colors.darkBlue};
 `;
 
 const StyledDescription = styled.p`
@@ -43,13 +44,15 @@ const StyledDescription = styled.p`
 `;
 
 const CardItems = ({ item }) => {
-  const { image, description, title, author } = item;
+  const { image, link, description, name, author } = item;
   return (
     <StyledContainer>
       <StyledImage image={image} />
       <StyledContent>
         <StyledAuthor>{author}</StyledAuthor>
-        <StyledTitle>{title}</StyledTitle>
+        <StyledName href={link} target="_blank" rel="noopener noreferrer">
+          {name}
+        </StyledName>
         <StyledDescription>{description}</StyledDescription>
       </StyledContent>
     </StyledContainer>
