@@ -2,6 +2,23 @@ export const data = {
   main: {
     nav: {
       name: "Logo",
+      items: [
+        {
+          name: "Home",
+        },
+        {
+          name: "About",
+        },
+        {
+          name: "Contact",
+        },
+        {
+          name: "Blog",
+        },
+        {
+          name: "Careers",
+        },
+      ],
       icons: [
         {
           name: "IconHamburger",
