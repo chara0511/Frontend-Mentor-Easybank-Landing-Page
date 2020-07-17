@@ -26,6 +26,12 @@ const StyledContainer = styled.footer`
   padding-top: 2.2em;
   padding-bottom: 2.2em;
 
+  ${media.mdDesktop`
+    width: 85%;`};
+
+  ${media.lgDesktop`
+    width: 80%;`};
+
   & .box {
     ${media.mdDesktop`
     display: flex;

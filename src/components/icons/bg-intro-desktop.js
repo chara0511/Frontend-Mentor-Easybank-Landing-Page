@@ -7,6 +7,7 @@ const BgIntroDesktop = () => {
       xmlnsXlink="http://www.w3.org/1999/xlink"
       width="1271"
       height="1034"
+      className="bgIntroDesktopDisplay"
     >
       <defs>
         <linearGradient

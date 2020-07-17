@@ -19,6 +19,15 @@ const StyledContainer = styled.section`
   margin: 0 auto;
   text-align: center;
   padding-bottom: 3em;
+
+  ${media.mdDesktop`
+    width: 85%;
+    text-align: left;
+  `};
+
+  ${media.lgDesktop`
+    width: 80%;
+  `};
 `;
 
 const StyledTitle = styled.h2`
@@ -37,13 +46,16 @@ const StyledDescription = styled.p`
 const StyledGrid = styled.div`
   display: grid;
   row-gap: 1em;
+
   ${media.mdTablet`
     grid-template-columns:1fr 1fr;
-    column-gap: 1em`};
+    column-gap: 1em;
+  `};
 
   ${media.mdDesktop`
     grid-template-columns:1fr 1fr 1fr 1fr;
-    column-gap: 1em`};
+    column-gap: 1em;
+  `};
 `;
 
 const Featured = () => {

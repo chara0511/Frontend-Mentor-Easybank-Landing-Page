@@ -19,6 +19,15 @@ const StyledContainer = styled.section`
   margin: 0 auto;
   text-align: center;
   padding-bottom: 3em;
+
+  ${media.mdDesktop`
+    text-align: left;
+    width: 85%;
+  `};
+
+  ${media.lgDesktop`
+    width: 80%;
+  `};
 `;
 
 const StyledTitle = styled.h2`
@@ -33,11 +42,13 @@ const StyledGrid = styled.div`
 
   ${media.mdTablet`
     grid-template-columns:1fr 1fr;
-    column-gap: 1em`};
+    column-gap: 1em;
+  `};
 
   ${media.mdDesktop`
     grid-template-columns:1fr 1fr 1fr 1fr;
-    column-gap: 1em`};
+    column-gap: 1em;
+  `};
 `;
 
 const Cards = () => {
