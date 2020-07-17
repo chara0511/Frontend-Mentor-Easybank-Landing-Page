@@ -1,14 +1,10 @@
 import React from "react";
-
-import Hero from "./hero";
-import Featured from "./featured";
-import MainState from "./context/mainState";
-import Cards from "./cards";
-import Footer from "./footer";
+import { Nav, Hero, Featured, Cards, Footer, MainState } from ".";
 
 const Main = () => {
   return (
     <MainState>
+      <Nav />
       <Hero />
       <Featured />
       <Cards />

@@ -1,11 +1,27 @@
 export const data = {
   main: {
+    nav: {
+      name: "Logo",
+      icons: [
+        {
+          name: "IconHamburger",
+        },
+        { name: "IconClose" },
+      ],
+    },
     hero: {
       title: "Next generation digital banking",
       description:
         "Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.",
       image: "./images/image-mockups.png",
-      background: [{ desktop: "BgIntroDesktop" }, { mobile: "BgIntroMobile" }],
+      background: [
+        {
+          desktop: "BgIntroDesktop",
+        },
+        {
+          mobile: "BgIntroMobile",
+        },
+      ],
     },
     featured: {
       title: "Why choose Easybank?",

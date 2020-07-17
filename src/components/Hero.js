@@ -17,7 +17,6 @@ const StyledContainer = styled.div`
 
 const StyledBackground = styled.div`
   position: relative;
-  border: 10px brown solid;
   width: 100%;
   height: 19em;
 
