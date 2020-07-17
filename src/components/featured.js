@@ -41,6 +41,10 @@ const StyledDescription = styled.p`
   font-weight: 400;
   line-height: 1.75em;
   padding-bottom: 3em;
+
+  ${media.mdDesktop`
+    width: 45%;
+  `}
 `;
 
 const StyledGrid = styled.div`
@@ -49,6 +53,11 @@ const StyledGrid = styled.div`
 
   ${media.mdTablet`
     grid-template-columns:1fr 1fr;
+    column-gap: 1em;
+  `};
+
+  ${media.smDesktop`
+    grid-template-columns:1fr 1fr 1fr;
     column-gap: 1em;
   `};
 

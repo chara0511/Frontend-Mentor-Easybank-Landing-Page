@@ -14,7 +14,7 @@ const StyledContainer = styled.div`
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -25,18 +25,28 @@ const StyledContainer = styled.div`
   }
 `;
 
-const StyledMenu = styled.ul`
+const StyledContainerMenu = styled(StyledContainer)`
   border: black 2px solid;
   position: fixed;
-  top: 5em;
-  left: 5%;
-  right: 5%;
-  background: ${colors.white};
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    ${colors.darkBlue} 0%,
+    transparent 100%
+  );
   z-index: 1;
+`;
+
+const StyledMenu = styled.ul`
+  background: ${colors.white};
   border-radius: 8px;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
-  box-shadow: -5px -5px 40px 15px ${colors.darkBlue};
+  width: 100%;
+  margin-top: -10em;
 `;
 
 const Nav = () => {
@@ -67,11 +77,13 @@ const Nav = () => {
       </StyledContainer>
 
       {checked ? (
-        <StyledMenu>
-          {items.map((item, index) => (
-            <NavItems key={index} item={item} />
-          ))}
-        </StyledMenu>
+        <StyledContainerMenu>
+          <StyledMenu>
+            {items.map((item, index) => (
+              <NavItems key={index} item={item} />
+            ))}
+          </StyledMenu>
+        </StyledContainerMenu>
       ) : null}
     </>
   );

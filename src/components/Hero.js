@@ -22,6 +22,10 @@ const StyledBackground = styled.div`
 
   ${media.mdDesktop`
       height: 40em;
+
+      & .overflow-hidden{
+        overflow: hidden;
+      }
     `};
 
   & .bgIntroDesktopDisplay {
@@ -65,7 +69,9 @@ const StyledContent = styled.section`
   `};
 
   ${media.lgDesktop`
-   margin-left: 10%;
+    width: 34em;
+    margin-left: 10%;
+    margin-right: 5%;
   `};
 `;
 
@@ -86,7 +92,15 @@ const StyledImage = styled.div`
   ${media.mdDesktop`
     width: 675px;
     height: 850px;
-    right: -7.5em;
+    margin-right: -5em;
+    position: relative;
+
+  `};
+
+  ${media.lgDesktop`
+    width: 750px;
+    height: 850px;
+    margin-right: -6em;
   `};
 `;
 
@@ -110,19 +124,23 @@ const Hero = () => {
   const { hero } = data;
   const { background, image, title, description } = hero;
 
-  console.log(background[0].desktop);
-
   return (
     <StyledContainer>
       <StyledBackground>
         <FormattedIcons name={background[0].desktop} />
+
         <FormattedIcons name={background[1].mobile} />
-        <StyledImage image={image} />
+
+        <div className="overflow-hidden">
+          <StyledImage image={image} />
+        </div>
       </StyledBackground>
 
       <StyledContent>
         <StyledTitle>{title}</StyledTitle>
+
         <StyledDescription>{description}</StyledDescription>
+
         <ButtonHero>Request Invite</ButtonHero>
       </StyledContent>
     </StyledContainer>

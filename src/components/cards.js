@@ -45,6 +45,11 @@ const StyledGrid = styled.div`
     column-gap: 1em;
   `};
 
+  ${media.smDesktop`
+    grid-template-columns:1fr 1fr 1fr;
+    column-gap: 1em;
+  `};
+
   ${media.mdDesktop`
     grid-template-columns:1fr 1fr 1fr 1fr;
     column-gap: 1em;
