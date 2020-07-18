@@ -43,7 +43,6 @@ const StyledBackground = styled.div`
       height: max-content;
       margin-top: -11em;
       position: absolute;
-      z-index: -1;
     `};
   }
 
