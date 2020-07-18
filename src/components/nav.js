@@ -3,12 +3,12 @@ import MainContext from "./context/mainContext";
 
 import styled from "styled-components";
 import { FormattedIcons } from "./icons";
-import { theme } from "../styles";
+import { theme, media, Button } from "../styles";
 import NavItems from "./sections/navItems";
 
 const { colors } = theme;
 
-const StyledContainer = styled.div`
+const StyledContainerMobile = styled.div`
   background: ${colors.white};
   border: solid 2px cyan;
   width: 100%;
@@ -23,9 +23,32 @@ const StyledContainer = styled.div`
   & .checkbox {
     display: none;
   }
+
+  ${media.smDesktop`
+    display: none;
+  `}
 `;
 
-const StyledContainerMenu = styled(StyledContainer)`
+const StyledContainerDesktop = styled(StyledContainerMobile)`
+  display: none;
+
+  ${media.smDesktop`
+    display: flex;
+    padding: 0 5%;
+  `}
+
+  ${media.mdDesktop`
+    display: flex;
+    padding: 0 8%;
+  `}
+
+   ${media.lgDesktop`
+    display: flex;
+    padding: 0 10%;
+  `}
+`;
+
+const StyledContentMenu = styled(StyledContainerMobile)`
   border: black 2px solid;
   position: fixed;
   top: 0;
@@ -40,13 +63,29 @@ const StyledContainerMenu = styled(StyledContainer)`
   z-index: 1;
 `;
 
-const StyledMenu = styled.ul`
+const StyledMenuMobile = styled.ul`
   background: ${colors.white};
   border-radius: 8px;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   width: 100%;
-  margin-top: -10em;
+  margin-top: -5em;
+`;
+
+const StyledMenuDesktop = styled(StyledMenuMobile)`
+  border: 1px cyan solid;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  width: 60%;
+
+  ${media.mdDesktop`
+    width: 50%;
+  `}
+
+  ${media.lgDesktop`
+    width: 40%;
+  `}
 `;
 
 const Nav = () => {
@@ -60,7 +99,7 @@ const Nav = () => {
 
   return (
     <>
-      <StyledContainer>
+      <StyledContainerMobile>
         <FormattedIcons name={name} />
 
         <input
@@ -74,17 +113,29 @@ const Nav = () => {
         <label htmlFor="checkbox">
           <FormattedIcons name={icons[0].name} />
         </label>
-      </StyledContainer>
+      </StyledContainerMobile>
 
       {checked ? (
-        <StyledContainerMenu>
-          <StyledMenu>
+        <StyledContentMenu>
+          <StyledMenuMobile>
             {items.map((item, index) => (
               <NavItems key={index} item={item} />
             ))}
-          </StyledMenu>
-        </StyledContainerMenu>
+          </StyledMenuMobile>
+        </StyledContentMenu>
       ) : null}
+
+      <StyledContainerDesktop>
+        <FormattedIcons name={name} />
+
+        <StyledMenuDesktop>
+          {items.map((item, index) => (
+            <NavItems key={index} item={item} />
+          ))}
+        </StyledMenuDesktop>
+
+        <Button>Request Invite</Button>
+      </StyledContainerDesktop>
     </>
   );
 };

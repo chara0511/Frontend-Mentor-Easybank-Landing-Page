@@ -1,13 +1,30 @@
 import React from "react";
 import styled from "styled-components";
+import { theme } from "../../styles";
+
+const { colors } = theme;
 
 const StyledContainer = styled.li`
   border: 1px red;
   text-align: center;
-  margin: 1.5em auto;
+  margin: auto;
 `;
 
-const StyledItem = styled.a``;
+const StyledItem = styled.a`
+  color: ${colors.grayishBlue};
+  padding: 1.2em 1em;
+
+  &:hover {
+    color: ${colors.darkBlue};
+    border-bottom: 5px solid transparent;
+    border-image: linear-gradient(
+        to right,
+        ${colors.limeGreen} 0%,
+        ${colors.brightCyan} 100%
+      )
+      1;
+  }
+`;
 const NavItems = ({ item }) => {
   return (
     <StyledContainer>
