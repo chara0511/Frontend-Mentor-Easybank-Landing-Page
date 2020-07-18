@@ -12,6 +12,15 @@ const { colors, fontSizes } = theme;
 
 const StyledBackground = styled.div`
   background: ${colors.darkBlue};
+
+  & .attribution {
+    font-size: 11px;
+    text-align: center;
+    color: ${colors.grayishBlue};
+  }
+  & .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
 `;
 
 const StyledContainer = styled.footer`
@@ -119,6 +128,18 @@ const Footer = () => {
           <StyledCopy>{other.copy}</StyledCopy>
         </article>
       </StyledContainer>
+
+      <div className="attribution">
+        Challenge by{" "}
+        <a
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Frontend Mentor
+        </a>
+        . Coded by <a href="https://github.com/jcarlos0511">Chara-</a>.
+      </div>
     </StyledBackground>
   );
 };
