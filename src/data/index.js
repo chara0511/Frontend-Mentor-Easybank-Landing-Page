@@ -116,11 +116,11 @@ export const data = {
         icons: [
           {
             name: "IconFacebook",
-            link: "https://www.facebook.com/",
+            link: "https://www.facebook.com",
           },
           {
             name: "IconYoutube",
-            link: "https://www.youtube.com/",
+            link: "https://www.youtube.com",
           },
           {
             name: "IconTwitter",
@@ -128,11 +128,11 @@ export const data = {
           },
           {
             name: "IconPinterest",
-            link: "https://www.pinterest.com/",
+            link: "https://www.pinterest.com",
           },
           {
             name: "IconInstagram",
-            link: "https://www.instagram.com/",
+            link: "https://www.instagram.com",
           },
         ],
       },

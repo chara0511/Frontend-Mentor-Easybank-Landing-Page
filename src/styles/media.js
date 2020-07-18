@@ -17,13 +17,13 @@ export const media = Object.keys(sizes).reduce((accumulator, label) => {
   // changing their browsers font-size: https://zellwk.com/blog/media-query-units/
   const emSize = sizes[label] / 16;
 
-  console.log(emSize);
+  // console.log(emSize);
   accumulator[label] = (...args) => css`
     @media (min-width: ${emSize}em) {
       ${css(...args)};
     }
   `;
-  console.log(accumulator);
+  // console.log(accumulator);
   return accumulator;
 }, {});
 
