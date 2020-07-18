@@ -12,13 +12,10 @@ const { colors, fontSizes } = theme;
 
 const StyledBackground = styled.div`
   background: ${colors.darkBlue};
-  border: 1px solid red;
 `;
 
 const StyledContainer = styled.footer`
-  border: 5px solid green;
   width: 90%;
-  border: 1px solid black;
   margin: 0 auto;
   text-align: center;
   display: grid;
@@ -55,7 +52,6 @@ const StyledLogo = styled.div`
   height: 22px;
   margin-top: 1em;
   margin-bottom: 1.7em;
-  border: 1px solid green;
 
   & svg .logo {
     fill: ${colors.white};
@@ -68,7 +64,6 @@ const StyledLogo = styled.div`
 `;
 
 const StyledItems = styled.ul`
-  border: 3px solid orange;
   display: flex;
   justify-content: center;
 

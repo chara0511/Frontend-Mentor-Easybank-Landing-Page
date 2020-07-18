@@ -5,7 +5,6 @@ import { theme } from "../../styles";
 const { colors } = theme;
 
 const StyledContainer = styled.li`
-  border: 1px red;
   text-align: center;
   margin: auto;
 `;

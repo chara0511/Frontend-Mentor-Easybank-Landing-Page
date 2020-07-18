@@ -10,12 +10,10 @@ const { colors, fontSizes } = theme;
 
 const StyledBackground = styled.div`
   background: ${colors.lightGrayishBlue};
-  border: 5px black solid;
 `;
 
 const StyledContainer = styled.section`
   width: 90%;
-  border: 1px solid green;
   margin: 0 auto;
   text-align: center;
   padding-bottom: 3em;
@@ -33,7 +31,8 @@ const StyledContainer = styled.section`
 const StyledTitle = styled.h2`
   font-size: ${fontSizes.xxl};
   font-weight: 400;
-  margin-top: 1.5em;
+  margin: 0;
+  padding-top: 1.5em;
 `;
 
 const StyledDescription = styled.p`

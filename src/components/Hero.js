@@ -5,14 +5,16 @@ import styled from "styled-components";
 import { Button, theme, media } from "../styles";
 import { FormattedIcons } from "./icons";
 
-const { fontSizes } = theme;
+const { colors, fontSizes } = theme;
 
 const StyledContainer = styled.div`
-  border: 4px solid blue;
+  background: ${colors.veryLightGray};
+  padding-bottom: 1.5em;
 
   ${media.mdDesktop`
- display: flex;
- flex-direction: row-reverse;`}
+    display: flex;
+    flex-direction: row-reverse;
+  `};
 `;
 
 const StyledBackground = styled.div`
@@ -57,7 +59,6 @@ const StyledBackground = styled.div`
 
 const StyledContent = styled.section`
   width: 90%;
-  border: 2px solid green;
   margin: 0 auto;
   text-align: center;
 
@@ -76,7 +77,6 @@ const StyledContent = styled.section`
 `;
 
 const StyledImage = styled.div`
-  border: 1px solid blue;
   margin: 0 auto;
   margin-top: -35px;
   background: url(${(props) => props.image});

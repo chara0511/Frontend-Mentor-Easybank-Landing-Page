@@ -10,12 +10,11 @@ const { colors, fontSizes } = theme;
 
 const StyledBackground = styled.div`
   background: ${colors.veryLightGray};
-  border: 5px black solid;
+  padding-top: 1.5em;
 `;
 
 const StyledContainer = styled.section`
   width: 90%;
-  border: 1px solid green;
   margin: 0 auto;
   text-align: center;
   padding-bottom: 3em;

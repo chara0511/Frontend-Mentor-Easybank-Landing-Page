@@ -6,7 +6,6 @@ import { theme } from "../../styles";
 const { colors, fontSizes } = theme;
 
 const StyledContainer = styled.article`
-  border: 1px solid red;
   background: ${colors.white};
   border-radius: 10px;
   overflow: hidden;

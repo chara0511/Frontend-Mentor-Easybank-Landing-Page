@@ -10,7 +10,6 @@ const { colors } = theme;
 
 const StyledContainerMobile = styled.div`
   background: ${colors.white};
-  border: solid 2px cyan;
   width: 100%;
   position: fixed;
   top: 0;
@@ -55,7 +54,6 @@ const StyledContainerDesktop = styled(StyledContainerMobile)`
 `;
 
 const StyledContentMenu = styled(StyledContainerMobile)`
-  border: black 2px solid;
   position: fixed;
   top: 0;
   left: 0;
@@ -79,7 +77,6 @@ const StyledMenuMobile = styled.ul`
 `;
 
 const StyledMenuDesktop = styled(StyledMenuMobile)`
-  border: 1px cyan solid;
   margin: 0 auto;
   padding: 0;
   display: flex;
