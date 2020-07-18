@@ -2,7 +2,7 @@ import React, { useContext, useState, useRef } from "react";
 import MainContext from "./context/mainContext";
 
 import styled from "styled-components";
-import { FormattedIcons } from "./icons";
+import { FormattedIcons, Logo } from "./icons";
 import { theme, media, Button } from "../styles";
 import NavItems from "./sections/navItems";
 
@@ -35,6 +35,12 @@ const StyledContainerDesktop = styled(StyledContainerMobile)`
   ${media.smDesktop`
     display: flex;
     padding: 0 5%;
+    height: 3.7em;
+
+    & svg linearGradient {
+      id:'log',
+      
+    }
   `}
 
   ${media.mdDesktop`
@@ -91,11 +97,15 @@ const StyledMenuDesktop = styled(StyledMenuMobile)`
 const Nav = () => {
   const { data } = useContext(MainContext);
   const { nav } = data;
-  const { name, icons, items } = nav;
+  const { name, name2, icons, items } = nav;
 
   const [checked, setChecked] = useState(false);
 
   const ref = useRef(null);
+
+  const navItems = items.map((item, index) => (
+    <NavItems key={index} item={item} />
+  ));
 
   return (
     <>
@@ -111,28 +121,24 @@ const Nav = () => {
         />
 
         <label htmlFor="checkbox">
-          <FormattedIcons name={icons[0].name} />
+          {checked ? (
+            <FormattedIcons name={icons[1].name} />
+          ) : (
+            <FormattedIcons name={icons[0].name} />
+          )}
         </label>
       </StyledContainerMobile>
 
       {checked ? (
         <StyledContentMenu>
-          <StyledMenuMobile>
-            {items.map((item, index) => (
-              <NavItems key={index} item={item} />
-            ))}
-          </StyledMenuMobile>
+          <StyledMenuMobile>{navItems}</StyledMenuMobile>
         </StyledContentMenu>
       ) : null}
 
       <StyledContainerDesktop>
-        <FormattedIcons name={name} />
+        <Logo name={name2} />
 
-        <StyledMenuDesktop>
-          {items.map((item, index) => (
-            <NavItems key={index} item={item} />
-          ))}
-        </StyledMenuDesktop>
+        <StyledMenuDesktop>{navItems}</StyledMenuDesktop>
 
         <Button>Request Invite</Button>
       </StyledContainerDesktop>

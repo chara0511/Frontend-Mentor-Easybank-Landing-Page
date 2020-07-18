@@ -12,7 +12,7 @@ const StyledContainer = styled.li`
 
 const StyledItem = styled.a`
   color: ${colors.grayishBlue};
-  padding: 1.2em 1em;
+  padding: 1em;
 
   &:hover {
     color: ${colors.darkBlue};

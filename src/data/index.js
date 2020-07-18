@@ -2,6 +2,7 @@ export const data = {
   main: {
     nav: {
       name: "Logo",
+      name2: "Logonav",
       items: [
         {
           name: "Home",
@@ -111,6 +112,7 @@ export const data = {
     footer: {
       social: {
         name: "Logo",
+        name2: "Logofooter",
         icons: [
           {
             name: "IconFacebook",

@@ -58,7 +58,7 @@ const FormattedIcons = ({ name }) => {
       return <IconYoutube />;
 
     case "Logo":
-      return <Logo />;
+      return <Logo name={name} />;
 
     default:
       return null;

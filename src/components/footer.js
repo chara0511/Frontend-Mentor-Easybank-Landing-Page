@@ -6,7 +6,7 @@ import MenuItems from "./sections/menuItems";
 
 import styled from "styled-components";
 import { theme, Button, media } from "../styles";
-import { FormattedIcons } from "./icons";
+import { Logo } from "./icons";
 
 const { colors, fontSizes } = theme;
 
@@ -27,23 +27,27 @@ const StyledContainer = styled.footer`
   padding-bottom: 2.2em;
 
   ${media.mdDesktop`
-    width: 85%;`};
+    width: 85%;
+  `};
 
   ${media.lgDesktop`
-    width: 80%;`};
+    width: 80%;
+  `};
 
   & .box {
     ${media.mdDesktop`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-end`};
+    align-items: flex-end;
+  `};
   }
 
   ${media.mdTablet`
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 1em;
-    padding-top: 40px;`};
+    padding-top: 40px;
+  `};
 `;
 
 const StyledLogo = styled.div`
@@ -58,13 +62,19 @@ const StyledLogo = styled.div`
   }
 
   ${media.mdDesktop`
-    margin-bottom: 3.3em`};
+    margin-bottom: 3.3em;
+    text-align: left;
+  `};
 `;
 
 const StyledItems = styled.ul`
   border: 3px solid orange;
   display: flex;
   justify-content: center;
+
+  ${media.mdDesktop`
+    justify-content: left;
+  `};
 `;
 
 const StyledItemsMenu = styled(StyledItems)`
@@ -72,7 +82,8 @@ const StyledItemsMenu = styled(StyledItems)`
 
   ${media.mdTablet`
     columns: 2;
-    text-align: left;`};
+    text-align: left;
+  `};
 `;
 
 const StyledCopy = styled.p`
@@ -90,7 +101,7 @@ const Footer = () => {
       <StyledContainer>
         <article>
           <StyledLogo>
-            <FormattedIcons name={social.name} />
+            <Logo name={social.name2} />
           </StyledLogo>
 
           <StyledItems>
