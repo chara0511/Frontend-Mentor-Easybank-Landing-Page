@@ -15,7 +15,7 @@ const StyledIcon = styled.a`
   width: 25px;
   height: 25px;
 
-  & svg path:hover {
+  & svg:hover path {
     fill: ${colors.limeGreen};
   }
 `;
@@ -23,7 +23,12 @@ const StyledIcon = styled.a`
 const Items = ({ icon }) => {
   return (
     <StyledContainer>
-      <StyledIcon href={icon.link} target="_blank" rel="noopener noreferrer">
+      <StyledIcon
+        href={icon.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`icon__${icon.name}`}
+      >
         <FormattedIcons name={icon.name} />
       </StyledIcon>
     </StyledContainer>

@@ -12,10 +12,10 @@ const StyledContainer = styled.li`
 const StyledItem = styled.a`
   color: ${colors.grayishBlue};
   padding: 1em;
+  border-bottom: 5px solid transparent;
 
   &:hover {
     color: ${colors.darkBlue};
-    border-bottom: 5px solid transparent;
     border-image: linear-gradient(
         to right,
         ${colors.limeGreen} 0%,

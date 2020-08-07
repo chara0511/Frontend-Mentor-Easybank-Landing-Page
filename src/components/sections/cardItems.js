@@ -5,7 +5,7 @@ import { theme } from "../../styles";
 
 const { colors, fontSizes } = theme;
 
-const StyledContainer = styled.article`
+const StyledContainer = styled.div`
   background: ${colors.white};
   border-radius: 10px;
   overflow: hidden;

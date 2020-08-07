@@ -4,7 +4,6 @@ const IconOnline = () => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72">
       <defs>
-        debugger;
         <linearGradient id="iconOnline" x1="0%" x2="99.58%" y1="0%" y2="99.58%">
           <stop offset="0%" stopColor="#33D35E"></stop>
           <stop offset="100%" stopColor="#2AB6D9"></stop>

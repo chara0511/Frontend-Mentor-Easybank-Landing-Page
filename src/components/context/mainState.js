@@ -6,7 +6,7 @@ const MainState = (props) => {
   const [state, setState] = useState(data.main);
 
   return (
-    <MainContext.Provider value={{ data: state }}>
+    <MainContext.Provider value={{ data: state, setState }}>
       {props.children}
     </MainContext.Provider>
   );

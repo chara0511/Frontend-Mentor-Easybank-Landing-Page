@@ -13,7 +13,7 @@ const StyledBackground = styled.div`
   padding-top: 1.5em;
 `;
 
-const StyledContainer = styled.section`
+const StyledContainer = styled.article`
   width: 90%;
   margin: 0 auto;
   text-align: center;
@@ -35,7 +35,7 @@ const StyledTitle = styled.h2`
   margin-top: 1.5em;
 `;
 
-const StyledGrid = styled.div`
+const StyledGrid = styled.section`
   display: grid;
   row-gap: 1em;
 

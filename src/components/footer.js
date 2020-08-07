@@ -72,7 +72,7 @@ const StyledLogo = styled.div`
   `};
 `;
 
-const StyledItems = styled.ul`
+const StyledIcons = styled.ul`
   display: flex;
   justify-content: center;
 
@@ -81,7 +81,7 @@ const StyledItems = styled.ul`
   `};
 `;
 
-const StyledItemsMenu = styled(StyledItems)`
+const StyledItemsMenu = styled(StyledIcons)`
   display: block;
 
   ${media.mdTablet`
@@ -108,11 +108,11 @@ const Footer = () => {
             <Logo name={social.name2} />
           </StyledLogo>
 
-          <StyledItems>
+          <StyledIcons>
             {social.icons.map((icon, index) => (
               <Items key={index} icon={icon} />
             ))}
-          </StyledItems>
+          </StyledIcons>
         </article>
 
         <article>

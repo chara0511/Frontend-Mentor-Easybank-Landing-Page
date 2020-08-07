@@ -23,6 +23,21 @@ const StyledContainerMobile = styled.div`
     display: none;
   }
 
+  & .iconHamburger,
+  & .iconClose {
+    cursor: pointer;
+  }
+
+  & .iconHamburger:active {
+    transition: transform 0.3s ease;
+    transform: rotate(90deg);
+  }
+
+  & .iconClose:active {
+    transition: transform 0.3s ease;
+    transform: rotate(-90deg);
+  }
+
   ${media.smDesktop`
     display: none;
   `}
@@ -34,12 +49,8 @@ const StyledContainerDesktop = styled(StyledContainerMobile)`
   ${media.smDesktop`
     display: flex;
     padding: 0 5%;
-    height: 3.7em;
+    height: 3.5em;
 
-    & svg linearGradient {
-      id:'log',
-      
-    }
   `}
 
   ${media.mdDesktop`
